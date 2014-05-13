@@ -9,8 +9,40 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="css/style.css" type="text/css"/>
+        <script src="js/jquery.js"></script>
     </head>
     <body>
-        <div>TODO write content</div>
+        <div>
+            <ul>
+                <li><a>Home</a></li>
+                <li class="desplegable"><a>Empresa ></a>
+                    <ul class="pepita" >
+                        <li><a >¿Quiénes somos?</a></li>
+                        <li><a>Historias de éxito</a></li>
+                        <li><a>Metodología</a></li>
+                    </ul>
+                </li>
+                <li class="desplegable"><a>Servicios ></a>
+                    <ul class="juanita">
+                        <li><a>Consultoría</a></li>
+                        <li><a>Proyectos a medida</a></li>
+                        <li><a>Posicionamiento</a></li>
+                    </ul>
+                </li>
+                <li><a>Contacto</a></li>
+            </ul>
+            <p>Hola <span>¿Qué tal?</span></p>
+        </div>
+        <script>
+            $(document).ready(function(){
+       
+                $($("ul").find("li.desplegable")).click(function(){
+                    $("ul").css("display","block");
+         
+                });
+                
+            });
+        </script>
     </body>
 </html>
