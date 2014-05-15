@@ -38,7 +38,7 @@ and open the template in the editor.
             $(document).ready(function(){
        
                 $($("ul").find("li.desplegable")).click(function(){
-                    $("ul").css("display","block");
+                    $(this).find("ul").css("display","block");
          
                 });
                 
