@@ -32,16 +32,29 @@ and open the template in the editor.
                 </li>
                 <li><a>Contacto</a></li>
             </ul>
-            <p>Hola <span>¿Qué tal?</span></p>
         </div>
         <script>
-            $(document).ready(function(){
-       
-                $($("ul").find("li.desplegable")).click(function(){
-                    $(this).find("ul").css("display","block");
-         
+            $(document).ready(function() {
+
+            // mirar com funcionaria en metodo parent
+            
+                estado = false;
+
+                $($("ul").find("li.desplegable")).click(function() {
+
+
+                    if (estado === false) {
+                        $(this).find("ul").css("display", "block");
+                        estado = true;
+                    } else {
+                        $(this).find("ul").css("display", "none");
+                        estado = false;
+
+                    }
+
                 });
-                
+
+
             });
         </script>
     </body>
